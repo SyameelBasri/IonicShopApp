@@ -1,1 +1,7 @@
 # IonicShopApp
+
+The project is an e-commerce app with three pages; Products page to display list of products, Product detail page to display information on the specific product, and Cart page to display list of products which are added into cart. 
+
+List of products on Products page is shown in grid layout and responsive to the view size. On a large size view, the products are rendered in four columns, on a medium size view, the products are rendered in two to three columns, and on a small size view, the products are rendered in one column. Additionally, users can filter the products by their category. Product detail page displays product’s additional information such as rating and description. On the Product detail page, users can add the product into their cart by specifying the quantity and clicking the “Add to cart” button. All data for the products are fetched from Fake Store API and managed in ProductService class. Additional data field for “quantity sold” is programmatically added. To minimize the API call, the list of products is only fetched during ngOnInit.
+
+The Cart page displays a list of products that users added into the cart. Here users are allowed to update the product’s quantity or remove the product. Upon clicking the “Checkout” button, the cart will be emptied and the product’s quantity will be added to the product’s “quantity sold”. The list of products in the cart are stored in the Firebase Realtime Database and the API calls are managed in CartService class.
